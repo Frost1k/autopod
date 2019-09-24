@@ -1,3 +1,89 @@
-nav {
-  background: #000;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=cyrillic");
+header {
+  background: #FFFFFF;
+}
+
+header .logo {
+  margin-top: 27px;
+}
+
+header .logo img {
+  width: 159px;
+}
+
+header .clock {
+  margin-top: 34px;
+}
+
+header .clock img {
+  width: 50px;
+}
+
+header .clock table td {
+  padding-left: 14px;
+  text-align: right;
+}
+
+header .clock table td span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #414141;
+}
+
+header .a1 {
+  margin-top: 27px;
+  text-align: right;
+}
+
+header .a1 a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #414141;
+}
+
+header .a1 img {
+  position: absolute;
+  width: 50px;
+  top: 23px;
+  left: 280px;
+}
+
+header .mts {
+  margin-top: 9px;
+  text-align: right;
+}
+
+header .mts a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #414141;
+}
+
+header .btn {
+  margin-top: 24px;
+  width: 90%;
+  height: 71px;
+  background: #EF4722;
+  border-radius: 11px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  outline: none;
+  -webkit-box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
+          box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
 }

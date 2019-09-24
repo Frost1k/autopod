@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,33 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-2 logo">
                     <img src="/img/logo.png" alt="logo">
                 </div>
-                <div class="col-lg-2 offset-lg-1">
-                    <img src="/img/clock.png" alt="clock">
-                </div>
-                <div class="col-lg-4">
-                    <a href="tel:+375296646767"><span>A1</span> +375 (29) 664-67-67 <img class="messege" src="/img/mesage.png" alt="mesage"></a><br>
-                    <a href="tel:+375333646767"><span>MTS</span> +375 (33) 364-67-67</a>       
+                <div class="col-lg-2 offset-lg-1 clock">
+                    <table>
+                        <tr>
+                            <th>
+                                <img src="/img/clock.png" alt="clock">
+                            </th>
+                            <td>
+                                <span>8:00</span><br>
+                                <span>21:00</span> 
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="col-lg-3">
-                    <button class="btn button">Заказать звонок</button>
+                    <div class="a1"><a href="tel:+375296646767"><span>A1</span> +375 (29) 664-67-67</a><img src="/img/mesage.png" alt="mesage"></div>
+                    <div class="mts"><a href="tel:+375333646767"><span>MTS</span> +375 (33) 364-67-67</a></div>    
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <button class="btn">Заказать звонок</button>
                 </div>
             </div>
         </div>
@@ -38,4 +50,5 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 </body>
+
 </html>
