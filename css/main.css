@@ -35,7 +35,7 @@ header .clock table td span {
 }
 
 header .a1 {
-  margin-top: 27px;
+  margin-top: 29px;
   text-align: right;
 }
 
@@ -52,7 +52,7 @@ header .a1 a {
 header .a1 img {
   position: absolute;
   width: 50px;
-  top: 23px;
+  top: 25px;
   left: 280px;
 }
 
