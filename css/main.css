@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=cyrillic");
 header {
   background: #FFFFFF;
+  text-align: center;
 }
 
 header .logo {
@@ -19,6 +20,13 @@ header .clock img {
   width: 50px;
 }
 
+header .clock table {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 header .clock table td {
   padding-left: 14px;
   text-align: right;
@@ -34,12 +42,18 @@ header .clock table td span {
   color: #414141;
 }
 
-header .a1 {
+header .phone .a1 {
   margin-top: 29px;
   text-align: right;
 }
 
-header .a1 a {
+@media (max-width: 992px) {
+  header .phone .a1 {
+    text-align: center;
+  }
+}
+
+header .phone .a1 a {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -49,19 +63,23 @@ header .a1 a {
   color: #414141;
 }
 
-header .a1 img {
-  position: absolute;
-  width: 50px;
-  top: 25px;
-  left: 280px;
+header .phone .a1 img {
+  width: 45px;
+  margin-right: 6px;
 }
 
-header .mts {
-  margin-top: 9px;
+header .phone .mts {
+  margin-top: 7px;
   text-align: right;
 }
 
-header .mts a {
+@media (max-width: 992px) {
+  header .phone .mts {
+    text-align: center;
+  }
+}
+
+header .phone .mts a {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -71,12 +89,7 @@ header .mts a {
   color: #414141;
 }
 
-header .btn {
-  margin-top: 24px;
-  width: 90%;
-  height: 71px;
-  background: #EF4722;
-  border-radius: 11px;
+header .callback .btn {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -84,6 +97,26 @@ header .btn {
   line-height: 24px;
   color: #FFFFFF;
   outline: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  width: 90%;
+  height: 71px;
+  background: #EF4722;
+  border-radius: 11px;
+  cursor: pointer;
   -webkit-box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
           box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 992px) {
+  header .callback .btn {
+    width: 280px;
+  }
+}
+
+header .callback .btn:hover {
+  background: green;
 }
