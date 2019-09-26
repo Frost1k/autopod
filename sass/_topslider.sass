@@ -1,0 +1,77 @@
+#topslider    
+    max-height: 755px  
+    .text
+        position: absolute
+        top: 120px
+        z-index: 1
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 900
+        font-size: 50px
+        line-height: 72px
+        text-transform: uppercase
+        color: #414141
+        button            
+            font-family: Montserrat
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 24px
+            color: #FFFFFF
+            outline: none            
+            margin: 0
+            padding: 0
+            margin-top: 24px
+            width: 246px;
+            height: 71px;
+            background: #EF4722
+            border-radius: 11px    
+            cursor: pointer    
+            box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39)
+            transition: 0.4s
+            @media (max-width: 992px)
+                width: 280px                    
+            &:hover
+                background: green
+    .sl_slide
+        img
+            display: block
+            max-width: 100%
+            height: auto    
+    .slick-dots li
+        bottom: 60px 
+        margin: 7px           
+        justify-content: center           
+    .slick-dots li button
+        background: #FFFFFF
+        border: none
+        border-radius: 50%
+        font-size: 0px
+        height: 20px    
+        width: 20px                      
+    .slick-dots li[class="slick-active"] button
+        background: #EF4722
+        height: 20px    
+        width: 20px 
+        border-radius: 50%
+        border: none
+        font-size: 0px    
+    .slick-dots li.slick-active button:before
+        color: #EF4722     
+    .slick-dots li button:before
+        color: #FFFFFF    
+    .slider-box 
+        position: relative   
+    .prev,
+    .next 
+        position: absolute
+        top: 40%
+        height: 50px
+        width: 50px
+        z-index: 1
+        cursor: pointer
+    .next 
+        right: 10%
+    .prev
+        left: 10%
+         

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=cyrillic");
 header {
   background: #FFFFFF;
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -16,8 +17,20 @@ header .clock {
   margin-top: 34px;
 }
 
+@media (max-width: 992px) {
+  header .clock {
+    margin-top: 10px;
+  }
+}
+
 header .clock img {
   width: 50px;
+}
+
+@media (max-width: 992px) {
+  header .clock img {
+    width: 40px;
+  }
 }
 
 header .clock table {
@@ -42,6 +55,16 @@ header .clock table td span {
   color: #414141;
 }
 
+@media (max-width: 992px) {
+  header .clock table td span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 0px;
+  }
+}
+
 header .phone .a1 {
   margin-top: 29px;
   text-align: right;
@@ -49,6 +72,7 @@ header .phone .a1 {
 
 @media (max-width: 992px) {
   header .phone .a1 {
+    margin-top: 10px;
     text-align: center;
   }
 }
@@ -63,9 +87,25 @@ header .phone .a1 a {
   color: #414141;
 }
 
+@media (max-width: 992px) {
+  header .phone .a1 a span {
+    padding-left: 24px;
+  }
+}
+
 header .phone .a1 img {
   width: 45px;
   margin-right: 6px;
+}
+
+@media (max-width: 992px) {
+  header .phone .a1 img {
+    display: block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
 }
 
 header .phone .mts {
@@ -119,4 +159,115 @@ header .callback .btn {
 
 header .callback .btn:hover {
   background: green;
+}
+
+#topslider {
+  max-height: 755px;
+}
+
+#topslider .text {
+  position: absolute;
+  top: 120px;
+  z-index: 1;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #414141;
+}
+
+#topslider .text button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  width: 246px;
+  height: 71px;
+  background: #EF4722;
+  border-radius: 11px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
+          box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 992px) {
+  #topslider .text button {
+    width: 280px;
+  }
+}
+
+#topslider .text button:hover {
+  background: green;
+}
+
+#topslider .sl_slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#topslider .slick-dots li {
+  bottom: 60px;
+  margin: 7px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#topslider .slick-dots li button {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  font-size: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+#topslider .slick-dots li[class="slick-active"] button {
+  background: #EF4722;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: none;
+  font-size: 0px;
+}
+
+#topslider .slick-dots li.slick-active button:before {
+  color: #EF4722;
+}
+
+#topslider .slick-dots li button:before {
+  color: #FFFFFF;
+}
+
+#topslider .slider-box {
+  position: relative;
+}
+
+#topslider .prev,
+#topslider .next {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#topslider .next {
+  right: 10%;
+}
+
+#topslider .prev {
+  left: 10%;
 }
