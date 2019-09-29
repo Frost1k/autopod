@@ -11,6 +11,11 @@
         line-height: 72px
         text-transform: uppercase
         color: #414141
+        @media(max-width: 1200px)
+            font-size: 40px
+            line-height: 52px
+        @media (max-width: 992px)            
+            display: none    
         button            
             font-family: Montserrat
             font-style: normal
@@ -22,15 +27,19 @@
             margin: 0
             padding: 0
             margin-top: 24px
-            width: 246px;
-            height: 71px;
+            width: 246px
+            height: 71px
             background: #EF4722
             border-radius: 11px    
             cursor: pointer    
             box-shadow: 0px 13px 30px rgba(239, 71, 34, 0.39)
             transition: 0.4s
+            @media (max-width: 1200px)
+                width: 180px      
+                margin-top: 5px     
             @media (max-width: 992px)
-                width: 280px                    
+                width: 280px     
+                display: none               
             &:hover
                 background: green
     .sl_slide
@@ -41,14 +50,16 @@
     .slick-dots li
         bottom: 60px 
         margin: 7px           
-        justify-content: center           
+        justify-content: center                   
     .slick-dots li button
         background: #FFFFFF
         border: none
         border-radius: 50%
         font-size: 0px
         height: 20px    
-        width: 20px                      
+        width: 20px  
+        @media (max-width: 768px)
+            display: none                    
     .slick-dots li[class="slick-active"] button
         background: #EF4722
         height: 20px    
@@ -61,7 +72,7 @@
     .slick-dots li button:before
         color: #FFFFFF    
     .slider-box 
-        position: relative   
+        position: relative           
     .prev,
     .next 
         position: absolute
@@ -69,7 +80,9 @@
         height: 50px
         width: 50px
         z-index: 1
-        cursor: pointer
+        cursor: pointer     
+        @media (max-width: 768px)
+            display: none !important  
     .next 
         right: 10%
     .prev
