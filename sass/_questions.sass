@@ -1,0 +1,68 @@
+#questions
+    background: #ffffff
+    min-height: 800px
+    .questions-text
+        h4
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 900
+            font-size: 30px
+            line-height: 28px
+            text-transform: uppercase
+            color: #484848
+            text-align: center
+            margin-top: 80px 
+                       
+                
+    .accordion   
+        margin-top: 55px              
+        &-lines_top
+            height: 1px
+            width: 100%
+            background: #E6E6E6              
+            margin-bottom: 20px 
+        &-lines_bottom
+            height: 1px
+            width: 100%
+            background: #E6E6E6   
+            margin-top: 20px    
+            margin-bottom: 20px  
+        p 
+            font-family: Montserrat
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 28px
+            color: #000000
+        .card-body
+            font-family: Montserrat
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 28px
+            color: #000000    
+        .card  
+            border: none             
+            .card-header  
+                border: none 
+                padding-bottom: 5px
+                background-color: #ffffff    
+                .card-title   
+                    font-family: Montserrat
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 20px
+                    line-height: 28px
+                    color: #484848  
+    .accordion .card-header:after
+        font-family: 'FontAwesome'
+        content: "\f054"
+        font-size: 25px
+        font-weight: normal
+        color: #EF4722
+        float: right  
+        @media (min-width: 992px)
+            position: relative
+            bottom: 3px      
+    .accordion .card-header.collapsed:after   
+        content: "\f078" 
