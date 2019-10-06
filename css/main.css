@@ -1520,20 +1520,16 @@ footer {
 
 footer .footer-logo {
   float: left;
-  margin-top: 50px;
+  margin-top: 58px;
 }
 
 footer .footer-social {
   float: right;
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  -ms-flex-item-align: end;
-      align-self: end;
+  margin-top: 71px;
+}
+
+footer .footer-instagram {
+  margin-right: 8px;
 }
 
 footer .footer-line {
