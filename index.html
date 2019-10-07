@@ -130,10 +130,11 @@
                     <h2>Закажите подбор и станьте счастливым <br> обладателем своего авто</h2>
                 </div>
                 <div class="col-lg-12">
-                    <form action="#">
-                        <input type="text" placeholder="Имя" required>
-                        <input type="tel" placeholder="Телефон" required>
-                        <button class="btn" type="submit">Заказать сейчас</button>
+                    <form action="mailer/smart.php" method="POST">
+                        <input class="input" type="hidden" name="nameform" value="Блок форма 1>">
+                        <input class="input" type="text" name="user_name" placeholder="Имя" required>
+                        <input class="input" type="tel" name="user_phone" placeholder="Телефон" required>
+                        <button class="btn submit" type="submit">Заказать сейчас</button>
                     </form>
                 </div>
             </div>
@@ -1385,10 +1386,10 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="modal-form">
-                                        <form action="#">
+                                        <form action="mailer/smart.php" method="POST">
                                             <input type="text" placeholder="Имя" required>
                                             <input type="tel" placeholder="Телефон" required>
-                                            <button class="btn" type="submit">Заказать сейчас</button>
+                                            <button class="btn submit" type="submit">Заказать сейчас</button>
                                         </form>
                                     </div>
                                 </div>
@@ -1410,12 +1411,30 @@
 
 
 
-
+    
 
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/slick.min.js"></script>
     <script src="/js/main.js"></script>
+
+    <script>
+            $('form').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/mailer/smart.php",
+                    data: $(this).serialize()
+                }).done(function () {
+                    $(this).find("input").val("");
+                    alert("Сообщение успешно отправлено");
+                    $("form").trigger("reset");
+                    $('.modal').modal('hide');
+                });
+                return false;
+            });
+        </script>
+
 </body>
 
 </html>
