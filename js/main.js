@@ -2,7 +2,7 @@ $('form').submit(function (event) {
     event.preventDefault();
     $.ajax({
         type: "POST",
-        url: "/mailer/smart.php",
+        url: "../mailer/smart.php",
         data: $(this).serialize()
     }).done(function () {
         $(this).find("input").val("");

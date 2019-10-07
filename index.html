@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
 </head>
-
 <body>
     <header>
         <div class="container">
@@ -203,7 +202,8 @@
                         <div class="col-lg-4 col-sm-12">
                             <div class="cost-car">
                                 <span>50 руб</span>
-                                <button class="btn">Заказать</button>
+                                <button class="btn" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg-1">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -281,7 +281,8 @@
                         <div class="col-lg-4 col-sm-12">
                             <div class="cost-car">
                                 <span class="expert-day">300 руб</span>
-                                <button class="btn">Заказать</button>
+                                <button class="btn" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg-2">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -377,7 +378,8 @@
                         <div class="col-lg-4 col-sm-12">
                             <div class="cost-car">
                                 <span class="cost-key">500 руб</span>
-                                <button class="btn">Заказать</button>
+                                <button class="btn" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg-3">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -471,7 +473,8 @@
                         <div class="col-lg-4 col-sm-12">
                             <div class="cost-car">
                                 <p>50% <span>денег с торга</span></p>
-                                <button class="btn">Заказать</button>
+                                <button class="btn" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg-4">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -696,9 +699,10 @@
                     <h2>Закажите подбор и станьте счастливым <br> обладателем своего авто</h2>
                 </div>
                 <div class="col-lg-12">
-                    <form action="#">
-                        <input type="text" placeholder="Имя" required>
-                        <input type="tel" placeholder="Телефон" required>
+                    <form action="mailer/smart.php" method="POST">
+                        <input class="input" type="hidden" name="nameform" value="Блок форма 2">
+                        <input class="input" type="text" name="user_name" placeholder="Имя" required>
+                        <input class="input" type="tel" name="user_phone" placeholder="Телефон" required>
                         <button class="btn" type="submit">Заказать сейчас</button>
                     </form>
                 </div>
@@ -1349,9 +1353,10 @@
                         <div class="footer-form_text">
                             Подать заявку на подбор
                         </div>
-                        <form action="#">
-                            <input type="text" placeholder="Имя">
-                            <input type="tel" placeholder="Телефон">
+                        <form action="mailer/smart.php" method="POST">
+                            <input class="input" type="hidden" name="nameform" value="Футер форма">
+                            <input class="input" type="text" name="user_name" placeholder="Имя" required>
+                            <input class="input" type="tel" name="user_phone" placeholder="Телефон" required>
                             <button class="btn" type="submit">Заказать сейчас</button>
                         </form>
                     </div>
@@ -1367,7 +1372,6 @@
             </div>
         </div>
     </footer>
-
     <div id="modal-window">
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
@@ -1387,6 +1391,7 @@
                                 <div class="col-lg-5">
                                     <div class="modal-form">
                                         <form action="mailer/smart.php" method="POST">
+                                            <input class="input" type="hidden" name="nameform" value="Модальная форма">
                                             <input type="text" placeholder="Имя" required>
                                             <input type="tel" placeholder="Телефон" required>
                                             <button class="btn submit" type="submit">Заказать сейчас</button>
@@ -1405,18 +1410,163 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    
-
+    <div id="modal-window">
+        <div class="modal fade bd-example-modal-lg-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="modal-body">
+                        <div class="container-fluid bd-example-row">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="modal-text">
+                                        <h5>Закажите автоподбор и станьте счастливым обладателем автомобиля своей мечты
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="modal-form">
+                                        <form action="mailer/smart.php" method="POST">
+                                            <input class="input" type="hidden" name="nameform"
+                                                value="Разовая диагностика">
+                                            <input type="text" placeholder="Имя" required>
+                                            <input type="tel" placeholder="Телефон" required>
+                                            <button class="btn submit" type="submit">Заказать сейчас</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="modal-image">
+                                        <img src="/img/car.png" alt="car">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-window">
+        <div class="modal fade bd-example-modal-lg-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="modal-body">
+                        <div class="container-fluid bd-example-row">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="modal-text">
+                                        <h5>Закажите автоподбор и станьте счастливым обладателем автомобиля своей мечты
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="modal-form">
+                                        <form action="mailer/smart.php" method="POST">
+                                            <input class="input" type="hidden" name="nameform" value="Эксперт на день">
+                                            <input type="text" placeholder="Имя" required>
+                                            <input type="tel" placeholder="Телефон" required>
+                                            <button class="btn submit" type="submit">Заказать сейчас</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="modal-image">
+                                        <img src="/img/car.png" alt="car">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-window">
+        <div class="modal fade bd-example-modal-lg-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="modal-body">
+                        <div class="container-fluid bd-example-row">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="modal-text">
+                                        <h5>Закажите автоподбор и станьте счастливым обладателем автомобиля своей мечты
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="modal-form">
+                                        <form action="mailer/smart.php" method="POST">
+                                            <input class="input" type="hidden" name="nameform" value="Авто под ключ">
+                                            <input type="text" placeholder="Имя" required>
+                                            <input type="tel" placeholder="Телефон" required>
+                                            <button class="btn submit" type="submit">Заказать сейчас</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="modal-image">
+                                        <img src="/img/car.png" alt="car">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-window">
+        <div class="modal fade bd-example-modal-lg-4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="modal-body">
+                        <div class="container-fluid bd-example-row">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="modal-text">
+                                        <h5>Закажите автоподбор и станьте счастливым обладателем автомобиля своей мечты
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="modal-form">
+                                        <form action="mailer/smart.php" method="POST">
+                                            <input class="input" type="hidden" name="nameform" value="Авто под ключ +">
+                                            <input type="text" placeholder="Имя" required>
+                                            <input type="tel" placeholder="Телефон" required>
+                                            <button class="btn submit" type="submit">Заказать сейчас</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="modal-image">
+                                        <img src="/img/car.png" alt="car">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/slick.min.js"></script>
-    <script src="/js/main.js"></script> 
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
