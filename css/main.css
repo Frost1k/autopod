@@ -1647,7 +1647,8 @@ footer .footer-phone .phone-a1 img {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  width: 46px;
+  width: 43px;
+  height: 25px;
   padding-right: 10px;
 }
 
